@@ -1,0 +1,24 @@
+:root {
+  /* Palette */
+  --primary-color: blue; /* Elegir los colores apropiados para la paleta y añadir más propiedades si hacen falta*/
+  --accent-color: pink;
+  --warn-color: red;
+
+  /* Sizes */
+  --full-width: 100%;
+
+  /* Font */
+  --font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: var(--full-width);
+    margin: 0;
+}
+
+.header {
+    background-color: var(--primary-color);
+    height: 80px; /* Definir altura apropiada y considerar si utilizar una variable o no */
+    /* Alinear título y darle tamaño, añadir logo, etc..*/
+}
+
