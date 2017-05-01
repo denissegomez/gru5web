@@ -1,0 +1,16 @@
+.header {
+    background-color: transparent !important;
+    position: absolute !important;
+    right: 0;
+    left: 0;
+    padding-right: 30px;
+    z-index: 1000;
+}
+
+.banner {
+    position: relative;
+    background-image: url("images/banner.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+}
