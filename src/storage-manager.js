@@ -1,20 +1,16 @@
-var storage = {
+var storageManager = {
     
-    addUser: function(user){
-        var result = false;
+    set: function(key, value){
+        localStorage.setItem(key, JSON.stringify(value));
+    },
 
-        var users = this.getUsers();
+    get: function(key){
+        return JSON.parse(localStorage.getItem(key));
+    },
 
-        // TODO: antes de hacer el push (añadir al array users), comprobar que el usuario no existe y devulver true si se añadió bien.
-
-        users.push(user);
-        localStorage.setItem('users', JSON.stringify(users));
-
-        return result;
-    }, 
-    
+    // Gets the stored users. Always returns an array even if empty
     getUsers: function(){
-        var users = JSON.parse(localStorage.getItem('users'));
+        var users = this.get('users');
         if (users == null){
             users = []
         }
@@ -22,6 +18,30 @@ var storage = {
         return users;
     },
 
+    // Adds a new user if not already registerd
+    addUser: function(user){
+        var result = true;
+        var users = this.getUser();
+        
+        // Check if user does not exist already.
+        for(var i = 0; i <= users.lenght -1; i++){
+            if (users[i].fullname == user.fullname
+                || users[i].DNI == user.DNI
+                || users[i].email == user.email){
+                    result = false;
+                    break;
+            }
+        }
+
+        if (result == true){
+            // If the user does not exist, we register it!
+            users.push(user);
+            this.set("users", users);
+        }
+
+        return result;
+    }, 
+    
     /* Añadir más funciones para usuarios a medida que sean necesarias (ejemplo: getUser(username)) */
 
     addProperties: function(properties){
