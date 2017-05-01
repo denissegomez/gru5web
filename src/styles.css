@@ -44,3 +44,9 @@ body {
     color: white;
     margin-left: 15px;
 }
+
+.content {
+    width: 70%;
+    margin: 0 auto;
+    min-height: 300px;
+}
