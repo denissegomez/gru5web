@@ -50,3 +50,24 @@ body {
     margin: 0 auto;
     min-height: 300px;
 }
+
+.footer{
+    background-color: grey;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    color: white;
+    padding-top: var(--side-margin);
+}
+
+.footer div {
+    align-self: center;
+}
+
+.footer i {
+    font-size: 36px;
+    margin: 10px;
+}
+
