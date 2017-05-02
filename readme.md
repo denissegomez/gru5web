@@ -6,10 +6,11 @@
     - [Visual Studio Code](https://code.visualstudio.com/) es el recomendado por tener integrados, tanto el terminal como Git (lo que simplifica hacer pull, commit y push puesto que se puede hacer desde su interfaz de usuario y no hace falta memorizar los comandos).
 
 - Para descargar el código:
+    - Instalar [node.js](https://nodejs.org/es/download/)
     - Instalar [Git](https://git-scm.com/download)
     - Abrir el terminal (cmd, terminal, powershell, git bash... cualquiera de ellas)
     - Navegar en la consola a la carpeta donde queremos descargar el código (ejemplo: "cd c:\proyectos")
-    - Ejecutar la siguiente instrucción (sin las comillas): "git clone [url del repo en github]" 
+    - Ejecutar la siguiente instrucción (sin las comillas): "git clone https://github.com/denissegomez/gru5web.git" 
 
 - Descargar dependencias
     - Una vez descargado el código, navegar en el terminal a la carpeta del proyecto (ejemplo: "cd c:\proyectos\gru5web" )
