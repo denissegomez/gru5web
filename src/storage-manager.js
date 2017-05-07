@@ -7,6 +7,7 @@ var storageManager = {
     get: function(key){
         return JSON.parse(localStorage.getItem(key));
     },
+   
 
     // Gets the stored users. Always returns an array even if empty
     getUsers: function(){
@@ -47,12 +48,12 @@ var storageManager = {
     addProperties: function(properties){
         var storedProperties = this.getProperties();
         if (storedProperties == null){
-            localStorage.setItem('properties', JSON.stringify(PROPERTIES));
+            this.set('properties',PROPERTIES);
         }
     },
 
     getProperties: function(){
-       
+       return this.get("properties");
     }
 
     /* Añadir más funciones para inmuebles a medida que sean necesarias (ejemplo: addCommentToProperty()) */
