@@ -19,62 +19,64 @@
 
         <div class="content">
 
-            <form>
+            <form id="registerForm" action="#" onsubmit="register()">
                 <div>
                     <label>Nombre</label>
-                    <input id="name" type="text" required >
+                    <input id="name" type="text" required>
                 </div>
                 <div>
                     <label>Apellidos</label>
-                    <input id="name" type="text" required >
+                    <input id="lastname" type="text" required >
                 </div>
                 <div>
                     <label>DNI</label>
-                    <input id="name" type="text" required >
+                    <input id="dni" type="text" required >
                 </div>
                 <div>
                     <label>Fecha de Nacimiento</label>
-                    <input id="name" type="text" required >
+                    <input id="birthdate" type="date" required >
                 </div>
                 <div>
                     <label>Calle</label>
-                    <input id="name" type="text" required >
+                    <input id="address" type="text" required >
                 </div>
                 <div>
                     <label>Población</label>
-                    <input id="name" type="text" required >
+                    <input id="city" type="text" required >
                 </div>
                 <div>
                     <label>Código Postal</label>
-                    <input id="name" type="text" required >
+                    <input id="zipcode" type="number" required >
                 </div>
                 <div>
                     <label>País</label>
-                    <input id="name" type="text" required >
+                    <input id="country" type="text" required >
                 </div>
                 <div>
                     <label>Teléfono</label>
-                    <input id="name" type="text" required >
+                    <input id="phone" type="tel" required >
                 </div>
                 <div>
                     <label>Email</label>
-                    <input id="name" type="text" required >
+                    <input id="email" type="email" required >
                 </div>
                 <div>
                     <label>Nombre de Usuario</label>
-                    <input id="name" type="text" required >
+                    <input id="username" type="text" required >
                 </div>
                 <div>
                     <label>Contraseña</label>
-                    <input id="name" type="text" required >
+                    <input id="password" type="password" required >
                 </div>
                 <div>
                     <label>Repita su Contraseña</label>
-                    <input id="name" type="text" required >
+                    <input id="verifyPassword" type="password" required >
                 </div>
-
+                <input type="submit" value="Registrarme">
 
             </form>
+
+            <p id="errorMessage"></p>
 
         </div>
         
