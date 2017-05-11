@@ -62,11 +62,29 @@ function validate(user){
         result = false;
     }
 
+    if (user.zipcode.length !== 5){
+        errorMessage.innerText = errorMessage.innerText + "\n El código postal tiene que tener una longitud de 5 números.";
+        result = false;
+    }
+
+    if (user.phone.length !== 9){
+        errorMessage.innerText = errorMessage.innerText + "\n El teléfono tiene que tener una longitud de 9 números";
+        result = false;
+    }
+
+    if (user.password.length < 8){
+        errorMessage.innerText = errorMessage.innerText + "\n La contraseña tiene que tener una longitud de al menos 8 caracteres";
+        result = false;
+    }
+
+    // TODO verify uppercase and numbers
+    // str.replace(/[^A-Z]/g, "").length
+
     var verifyPassword = document.getElementById("verifyPassword").value;
     if (user.password !== verifyPassword){
         errorMessage.innerText = errorMessage.innerText + "\n No coinciden las contraseñas.";
         result = false;
-    }
+    } 
 
     if (result) {
         errorMessage.innerText = "";
