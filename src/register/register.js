@@ -68,17 +68,24 @@ function validate(user){
     }
 
     if (user.phone.length !== 9){
-        errorMessage.innerText = errorMessage.innerText + "\n El teléfono tiene que tener una longitud de 9 números";
+        errorMessage.innerText = errorMessage.innerText + "\n El teléfono tiene que tener una longitud de 9 números.";
         result = false;
     }
 
     if (user.password.length < 8){
-        errorMessage.innerText = errorMessage.innerText + "\n La contraseña tiene que tener una longitud de al menos 8 caracteres";
+        errorMessage.innerText = errorMessage.innerText + "\n La contraseña tiene que tener una longitud de al menos 8 caracteres.";
         result = false;
     }
 
-    // TODO verify uppercase and numbers
-    // str.replace(/[^A-Z]/g, "").length
+    if (user.password.replace(/[^A-Z]/g, "").length < 2){
+        errorMessage.innerText = errorMessage.innerText + "\n La contraseña tiene que tener más de una mayúscula.";
+        result = false;
+    }
+
+    if (user.password.replace(/[^0-9]/g, "").length < 2){
+        errorMessage.innerText = errorMessage.innerText + "\n La contraseña tiene que tener más de un número.";
+        result = false;
+    }
 
     var verifyPassword = document.getElementById("verifyPassword").value;
     if (user.password !== verifyPassword){
