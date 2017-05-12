@@ -29,7 +29,7 @@ function getUser(){
     user.name = document.getElementById("name").value;
     user.lastname = document.getElementById("lastname").value;
     user.fullname = user.name + " " + user.lastname;
-    user.DNI = document.getElementById("dni").value;
+    user.DNI = document.getElementById("dni").value.toUpperCase();
     user.birthdate = document.getElementById("birthdate").value;
     user.address = document.getElementById("address").value;
     user.city = document.getElementById("city").value;
@@ -56,6 +56,7 @@ function isAdult(birthdate) {
 function validate(user){
     var result = true;
     var errorMessage = document.getElementById("errorMessage");
+    errorMessage.innerText = "";
 
     if (isDniValid(user.DNI) == false){
         errorMessage.innerText = errorMessage.innerText + "\n Debe introducir un DNI válido.";

@@ -19,7 +19,7 @@
 
         <div class="content">
 
-            <form id="registerForm" action="#" onsubmit="register()">
+            <form id="registerForm" action="#" onsubmit="register(); return false;" autocomplete="true">
                 <div>
                     <label>Nombre</label>
                     <input id="name" type="text" required>
@@ -30,7 +30,7 @@
                 </div>
                 <div>
                     <label>DNI</label>
-                    <input id="dni" type="text" pattern="/^\d{8}[a-zA-Z]$/" required >
+                    <input id="dni" type="text" pattern="^(\d{8}[A-Z])$" required >
                 </div>
                 <div>
                     <label>Fecha de Nacimiento</label>
