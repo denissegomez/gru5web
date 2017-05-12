@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         
     </head>
-    <body onload="addProperties()">
+    <body onload="initializeApp()">
         <!-- Header -->
         <div class="header">
             <div>Property Portal</div>
@@ -48,7 +48,8 @@
         <script src="storage-manager.js"></script>
         <script src="properties.js"></script>
         <script>
-            function addProperties(){
+            function initializeApp(){
+                storageManager.logoutUser();
                 storageManager.addProperties();
             }
         </script>
