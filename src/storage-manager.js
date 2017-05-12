@@ -10,6 +10,7 @@ var storageManager = {
         return JSON.parse(localStorage.getItem(key));
     },
    
+    // Generic function to remove an item from the localstorage
     remove: function(key){
         localStorage.removeItem(key)
     },
@@ -77,7 +78,9 @@ var storageManager = {
         return result;
     }, 
     
-    
+    getProperties: function(){
+       return this.get("properties");
+    },
 
     addProperties: function(properties){
         var storedProperties = this.getProperties();
@@ -85,10 +88,6 @@ var storageManager = {
             this.set('properties',PROPERTIES);
         }
     },
-
-    getProperties: function(){
-       return this.get("properties");
-    }
 
     /* Añadir más funciones para inmuebles a medida que sean necesarias (ejemplo: addCommentToProperty()) */
 }
