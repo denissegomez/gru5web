@@ -7,15 +7,17 @@
   /* Sizes */
   --full-width: 100%;
   --side-margin: 30px;
+  --form-top-margin: 30px;
 
   /* Font */
   --font-family: Arial, Helvetica, sans-serif;
   --title-font-size: 26px;
   --normal-font-size: 14px;
-  }
+}
 
 body {
     font-family: var(--font-family);
+    font-size: var(--normal-font-size);
     width: var(--full-width);
     margin: 0;
 }
@@ -71,3 +73,32 @@ body {
     margin: 10px;
 }
 
+form div {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: var(--form-top-margin);
+}
+
+form input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+form input:focus{
+    outline-width: 0;
+    border-top: none;
+    border-bottom-color: var(--primary-color);
+}
+
+form input:focus + label{
+    color: var(--primary-color);
+}
+
+form [type="submit"] {
+    margin-top: var(--form-top-margin);
+}
+
+.errorMessage {
+    color: red;
+}

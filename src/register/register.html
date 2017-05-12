@@ -13,7 +13,7 @@
         <div class="header">
             <div>Property Portal</div>
             <div>
-                <a class="link-button" href="login/login.html">Iniciar sesión</a>
+                <a class="link-button" href="../login/login.html">Iniciar sesión</a>
             </div>      
         </div>
 
@@ -21,62 +21,62 @@
 
             <form id="registerForm" action="#" onsubmit="register(); return false;" autocomplete="true">
                 <div>
-                    <label>Nombre</label>
                     <input id="name" type="text" required>
+                    <label>Nombre</label>
                 </div>
                 <div>
-                    <label>Apellidos</label>
                     <input id="lastname" type="text" required >
+                    <label>Apellidos</label>
                 </div>
                 <div>
-                    <label>DNI</label>
                     <input id="dni" type="text" pattern="^(\d{8}[A-Z])$" required >
+                    <label>DNI</label>
                 </div>
                 <div>
-                    <label>Fecha de Nacimiento</label>
                     <input id="birthdate" type="date" required >
+                    <label>Fecha de Nacimiento</label>
                 </div>
                 <div>
-                    <label>Calle</label>
                     <input id="address" type="text" required >
+                    <label>Calle</label>
                 </div>
                 <div>
-                    <label>Población</label>
                     <input id="city" type="text" required >
+                    <label>Población</label>
                 </div>
                 <div>
-                    <label>Código Postal</label>
                     <input id="zipcode" type="number" required >
+                    <label>Código Postal</label>
                 </div>
                 <div>
-                    <label>País</label>
                     <input id="country" type="text" required >
+                    <label>País</label>
                 </div>
                 <div>
-                    <label>Teléfono</label>
                     <input id="phone" type="number" required >
+                    <label>Teléfono</label>
                 </div>
                 <div>
-                    <label>Email</label>
                     <input id="email" type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required >
+                    <label>Email</label>
                 </div>
                 <div>
-                    <label>Nombre de Usuario</label>
                     <input id="username" type="text" required >
+                    <label>Nombre de Usuario</label>
                 </div>
                 <div>
-                    <label>Contraseña</label>
                     <input id="password" type="password" required >
+                    <label>Contraseña</label>
                 </div>
                 <div>
-                    <label>Repita su Contraseña</label>
                     <input id="verifyPassword" type="password" required >
+                    <label>Repita su Contraseña</label>
                 </div>
                 <input type="submit" value="Registrarme">
 
             </form>
 
-            <p id="errorMessage"></p>
+            <p id="errorMessage" class="errorMessage"></p>
 
         </div>
         
