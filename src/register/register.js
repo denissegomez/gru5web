@@ -57,6 +57,11 @@ function validate(user){
     var result = true;
     var errorMessage = document.getElementById("errorMessage");
 
+    if (isDniValid(user.DNI) == false){
+        errorMessage.innerText = errorMessage.innerText + "\n Debe introducir un DNI válido.";
+        result = false;
+    } 
+
     if (isAdult(user.birthdate) == false){
         errorMessage.innerText = errorMessage.innerText + "\n Debe ser mayor de edad para poder registrarse.";
         result = false;
@@ -98,4 +103,22 @@ function validate(user){
     }
 
     return result;
+}
+
+function isDniValid(dni) {
+    var dniNumber;
+    var letr;
+    var letters;
+
+    dniNumber = dni.substr(0,dni.length-1);
+    letr = dni.substr(dni.length-1,1);
+    dniNumber = dniNumber % 23;
+    letters='TRWAGMYFPDXBNJZSQVHLCKET';
+    letters=letters.substring(dniNumber,dniNumber+1);
+    if (letters == letr.toUpperCase()) {
+        return true;
+    }
+    else{
+        return false;
+    }
 }

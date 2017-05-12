@@ -30,7 +30,7 @@
                 </div>
                 <div>
                     <label>DNI</label>
-                    <input id="dni" type="text" required >
+                    <input id="dni" type="text" pattern="/^\d{8}[a-zA-Z]$/" required >
                 </div>
                 <div>
                     <label>Fecha de Nacimiento</label>
@@ -58,7 +58,7 @@
                 </div>
                 <div>
                     <label>Email</label>
-                    <input id="email" type="email" required >
+                    <input id="email" type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required >
                 </div>
                 <div>
                     <label>Nombre de Usuario</label>
