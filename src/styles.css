@@ -1,8 +1,10 @@
 :root {
   /* Palette */
   --primary-color: #29b6f6; /* Elegir los colores apropiados para la paleta y añadir más propiedades si hacen falta*/
-  --accent-color:#ffeb3b;
+  --accent-color:#ffab40;
   --warn-color: red;
+  --shadow-color: lightgrey;
+  --contrast-font-color: white;
 
   /* Sizes */
   --full-width: 100%;
@@ -73,30 +75,47 @@ body {
     margin: 10px;
 }
 
+/* Form Styling */
 form div {
     display: flex;
-    flex-direction: column-reverse;
+    /* As labels go after inputs in order to select them when input is focused, column-reverse will show labels first*/
+    flex-direction: column-reverse; 
     margin-top: var(--form-top-margin);
 }
 
+/* Leave only bottom border on inputs */
 form input {
     border-top: none;
     border-left: none;
     border-right: none;
 }
 
+/* Highlight border bottom to primary color on focus and remove full default highlight*/
 form input:focus{
     outline-width: 0;
-    border-top: none;
     border-bottom-color: var(--primary-color);
 }
 
+/* Select input's acompaining label to set it to primary color too */
 form input:focus + label{
     color: var(--primary-color);
 }
 
+/* Form button material styles like */
 form [type="submit"] {
-    margin-top: var(--form-top-margin);
+    border: none;
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: var(--contrast-font-color);
+    box-shadow: 2px 2px 2px var(--shadow-color);
+    margin-right: 0px;
+}
+
+form [type="submit"]:active {
+    border: none;
+    padding: 10px;
+    background-color: grey;
+    box-shadow: 2px 6px 2px var(--shadow-color);
 }
 
 .errorMessage {
