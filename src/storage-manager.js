@@ -56,24 +56,32 @@ var storageManager = {
      * 'username' if there is already a user with that username
      * '' if the user was correctly registered */
     addUser: function(user){
-        var result = true;
+        var result = '';
         var users = this.getUser();
         
         // Check if user does not exist already.
         for(var i = 0; i <= users.lenght -1; i++){
-            if (users[i].fullname == user.fullname
-                || users[i].DNI == user.DNI
-                || users[i].email == user.email){
-                    result = false;
-                    break;
+            if(users[i].fullname == user.fullname){
+                return "fullname";
+                break;
+            }
+            if(users[i].DNI == user.DNI){
+                return "DNI";
+                break;
+            }
+            if(users[i].email == user.email){
+                return "email";
+                break;
+            }
+            if(users[i].username == user.username){
+                return "username";
+                break;
             }
         }
-
-        if (result == true){
-            // If the user does not exist, we register it!
-            users.push(user);
-            this.set("users", users);
-        }
+        
+        // If the user does not exist, we register it!
+        users.push(user);
+        this.set("users", users);
 
         return result;
     }, 

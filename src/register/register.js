@@ -3,9 +3,15 @@ function register(){
 
     var validated = validate(user);
 
-    
-    // if validated var result = storageManager.addUser(user);
-
+    if (validated == true){
+        var addUserResult = storageManager.addUser(user);
+        if (addUserResult = ''){
+            window.location.href = '../login/login.html';
+        }
+        else{
+            manageDuplicateUser(addUserResult);
+        }
+    }
     // ToDo: if result is false show error message, if true, login the user and redirect.
 }
 
@@ -121,5 +127,29 @@ function isDniValid(dni) {
     }
     else{
         return false;
+    }
+}
+
+function manageDuplicateUser(addUserResult){
+    var errorMessage = document.getElementById("errorMessage");
+    errorMessage.innerText = "";
+
+    switch(addUserResult){
+        case 'username':
+            errorMessage.innerText = errorMessage.innerText + "\n - El nombre de usuario elegido no está disponible.";
+            document.getElementById("username").focus();
+            break;
+        case 'DNI':
+            errorMessage.innerText = errorMessage.innerText + "\n - Ya existe un usuario con el DNI introducido.";
+            document.getElementById("dni").focus();
+            break;
+        case 'email':
+            errorMessage.innerText = errorMessage.innerText + "\n - Ya existe un usuario con el email introducido.";
+            document.getElementById("email").focus();
+            break;
+        case 'fullname':
+            errorMessage.innerText = errorMessage.innerText + "\n - Ya existe un usuario con el nombre introducido.";
+            document.getElementById("name").focus();
+            break;
     }
 }
