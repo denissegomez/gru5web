@@ -5,11 +5,13 @@
   --warn-color: red;
   --shadow-color: lightgrey;
   --contrast-font-color: white;
+  --secondary-font-color: darkgrey;
 
   /* Sizes */
   --full-width: 100%;
   --side-margin: 30px;
   --form-top-margin: 30px;
+  --field-font-size: 16px;
 
   /* Font */
   --font-family: Arial, Helvetica, sans-serif;
@@ -88,12 +90,19 @@ form input {
     border-top: none;
     border-left: none;
     border-right: none;
+    height: var(--side-margin);
+    font-size: var(--field-font-size);
 }
 
 /* Highlight border bottom to primary color on focus and remove full default highlight*/
 form input:focus{
     outline-width: 0;
     border-bottom-color: var(--primary-color);
+}
+
+form label{
+    color: var(--secondary-font-color);
+    font-style: italic;
 }
 
 /* Select input's acompaining label to set it to primary color too */
@@ -104,7 +113,7 @@ form input:focus + label{
 /* Form button material styles like */
 form [type="submit"] {
     border: none;
-    padding: 10px;
+    padding: 8px;
     background-color: var(--accent-color);
     color: var(--contrast-font-color);
     box-shadow: 2px 2px 2px var(--shadow-color);

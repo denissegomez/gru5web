@@ -1,0 +1,17 @@
+@import "../styles.css";
+
+.content{
+    display: flex;
+    flex-direction: row;
+}
+
+.content > div {
+    width: 50%;
+    padding: var(--side-margin);
+}
+
+.register-image img {
+    width: 100%;
+    height: auto;
+}
+
