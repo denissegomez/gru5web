@@ -38,7 +38,7 @@ var storageManager = {
     // If not found, return null
     getUserByUsername: function(username){
         var users = this.getUsers();
-        for(var i = 0; i <= users.lenght -1; i++){
+        for(var i = 0; i <= users.length -1; i++){
             if(users[i].username == username){
                 return users[i];
                 break;
@@ -57,10 +57,10 @@ var storageManager = {
      * '' if the user was correctly registered */
     addUser: function(user){
         var result = '';
-        var users = this.getUser();
+        var users = this.getUsers();
         
         // Check if user does not exist already.
-        for(var i = 0; i <= users.lenght -1; i++){
+        for(var i = 0; i <= users.length -1; i++){
             if(users[i].fullname == user.fullname){
                 return "fullname";
                 break;

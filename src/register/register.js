@@ -5,7 +5,7 @@ function register(){
 
     if (validated == true){
         var addUserResult = storageManager.addUser(user);
-        if (addUserResult = ''){
+        if (addUserResult == ''){
             window.location.href = '../login/login.html';
         }
         else{
