@@ -49,6 +49,8 @@ body {
     font-size: var(--normal-font-size);
     color: white;
     margin-left: 15px;
+    background: transparent;
+    border: none;
 }
 
 .content {
