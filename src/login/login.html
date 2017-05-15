@@ -20,7 +20,7 @@
         </div>
 
         <div class="content">
-            <form>
+            <form id="loginForm" action="#" onsubmit="login(); return false;" autocomplete="true">
                 <div>
                     <input type="text" id="username" required placeholder="Escriba aquí su nombre de usuario">
                     <label>Nombre de Usuario</label>
@@ -31,6 +31,9 @@
                 </div>
                 
             </form>
+
+            <p id="errorMessage" class="errorMessage"></p>
+            
         </div>
 
         <!-- Footer -->
