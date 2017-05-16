@@ -1,6 +1,7 @@
 /* Listado inicial de inmuebles disponibles */ 
 var PROPERTIES = [
     {
+        id: '1',
         description: 'Casa tradicional, completamente amueblada, naturaleza de vanguardia',
         address: 'calle Río Luna, 19',
         city: 'Besande',
@@ -12,11 +13,9 @@ var PROPERTIES = [
         '/images/leon2.jpg',
         '/images/leon3.jpg',
         '/images/leon4.jpg'],
-        /* Añadir más propiedades según sean necesarias */
     },
     {
-        /* Añadir aquí el segundo inmueble */
-    
+        id: '2',
         description: 'En pleno corazón de los Picos de Europa, con vistas espectaculares al Naranco, ideal para desconectar y vivir apartado del mundo. El terreno incluye establo y granja.',
         address: 'calle Trasgo, s/n',
         city: 'Allende',
@@ -31,8 +30,8 @@ var PROPERTIES = [
         '/images/allende5.jpg',
         '/images/allende6.jpg'],
     },
-    /* Añadir más inmuebles según sea necesario */
     {
+        id: '3',
         description: 'Chalet en paraje natural, vivienda tranquila a 1 km del pueblo',
         address: 'calle Rianxeira, 34',
         city: 'Saians',
@@ -46,6 +45,7 @@ var PROPERTIES = [
         '/images/pontevedra4.jpg'],
     },
     {
+        id: '4',
         description: 'Piso lujoso en el centro de Madrid, a 100 metros de transporte público, restaurantes y supermercados',
         address: 'Paseo de Recoletos, 21',
         city: 'Madrid',
@@ -60,6 +60,7 @@ var PROPERTIES = [
         '/images/madrid9.jpg'],        
     },
     {
+        id: '5',
         description: 'Chalet a las afueras de Madrid, urbanización tranquila y situado en plena sierra de Somosierra',
         address: 'Avenida de Carlos III,24',
         city: 'Somosierra',
@@ -72,6 +73,7 @@ var PROPERTIES = [
         '/images/madrid7.jpg'],        
     },
     {
+        id: '6',
         description: 'Chalet de lujo a las orillas del Mediterráneo, vistas al mar, vivienda vanguardista completamente amueblada',
         address: 'Carrer del Far,2',
         city: 'Begur',
@@ -86,6 +88,7 @@ var PROPERTIES = [
         '/images/begur7.jpg'],        
     },
     {
+        id: '7',
         description: 'Chalet cerca del núcleo urbano, vistas al mar, a 1km de la playa',
         address: 'Carrer de la Tramontana,54',
         city: 'Begur',
@@ -98,6 +101,7 @@ var PROPERTIES = [
         '/images/begurotra3.jpg'],        
     },
      {
+        id:'8',
         description: 'Chalet en urbanización cercana al pueblo, amplio terreno para construir más edificios anexos',
         address: 'Calle carbayón, 43',
         city: 'Navia',
@@ -112,6 +116,7 @@ var PROPERTIES = [
         '/images/navia6.jpg'],        
     },
     {
+        id: '9',
         description: 'Vivienda de lujo en pleno corazón del Parque Nacional de Banff, rodeado de naturaleza y cerca del núcleo urbano, ideal para los amantes del senderismo y los deportes de invierno',
         address: 'Carmilla Av.,4',
         city: 'Canmore',

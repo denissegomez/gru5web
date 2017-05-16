@@ -86,10 +86,26 @@ var storageManager = {
         return result;
     }, 
     
+    // Gets all the properties
     getProperties: function(){
        return this.get("properties");
     },
 
+    // Gets a Property in the available Properties by Id.
+    // Returns null if Property not found 
+    getProperty: function(id){
+        var properties = this.getProperties();
+        for (var i=0; i < properties.length; i++){
+            if (properties[i].id = id){
+                return properties[i];
+                break;
+            }
+        }
+
+        return null;
+    },
+
+    // Adds a collection of properties (ONLY USED ON FIRST SITE LOAD)
     addProperties: function(properties){
         var storedProperties = this.getProperties();
         if (storedProperties == null){
