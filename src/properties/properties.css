@@ -1,0 +1,29 @@
+@import "../styles.css";
+
+.card{
+    max-width: 100%;
+    height: 250px;
+    display: flex;
+    border: 1px solid var(--shadow-color);
+    margin-top: var(--side-margin);
+}
+
+.card:hover{
+    box-shadow: 0px 0px 5px 3px var(--shadow-color);
+}
+
+.card img{
+    max-width: 40%;
+    height: 100%;
+}
+
+.card div {
+    margin-left: var(--side-margin);
+    margin-right: var(--side-margin);
+}
+
+.card span{
+    font-weight: 600;
+    font-size: var(--field-font-size);
+    margin-right: 10px;
+}
