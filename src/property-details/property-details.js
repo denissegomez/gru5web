@@ -32,4 +32,12 @@ function getProperty(){
 function displayProperty(property){
     // ToDo Get Html Elements and set the properties of the Property 
     // Example: document.getElementById("description").innerHTML = property.description.
+    document.getElementById("description").innerHTML = property.description;
+    document.getElementById("address").innerHTML = property.address;
+    document.getElementById("city").innerHTML = property.city;
+    document.getElementById("region").innerHTML = property.region;
+    document.getElementById("year").innerHTML = property.year;
+    document.getElementById("numberOfBedrooms").innerHTML = property.numberOfBedrooms;
+    document.getElementById("price").innerHTML = property.price;
+    
 }
