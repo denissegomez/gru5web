@@ -17,8 +17,7 @@ function getProperty(){
 
         var property = storageManager.getProperty(id);
         if (property != null){
-            // ToDo 
-            // 1. Display it calling displayProperty(property)
+            displayProperty(property);
         } 
         else {
             showErrorAndExit();
@@ -30,14 +29,10 @@ function getProperty(){
 }
 
 function displayProperty(property){
-    // ToDo Get Html Elements and set the properties of the Property 
-    // Example: document.getElementById("description").innerHTML = property.description.
-    document.getElementById("description").innerHTML = property.description;
-    document.getElementById("address").innerHTML = property.address;
-    document.getElementById("city").innerHTML = property.city;
-    document.getElementById("region").innerHTML = property.region;
+    document.getElementById('mainImage').src = property.images[0];
+    document.getElementById("price").innerHTML = property.price + ' €';    
     document.getElementById("year").innerHTML = property.year;
-    document.getElementById("numberOfBedrooms").innerHTML = property.numberOfBedrooms;
-    document.getElementById("price").innerHTML = property.price;
-    
+    document.getElementById("description").innerHTML = property.description;
+    document.getElementById("address").innerHTML = property.address + '. ' + property.city + ' (' + property.region + ')';
+    document.getElementById("numberOfBedrooms").innerHTML = property.numberOfBedrooms + ' habitaciones';
 }
