@@ -3,7 +3,7 @@ var PROPERTIES = [
     {
         id: '1',
         description: 'Casa tradicional, completamente amueblada, naturaleza de vanguardia',
-        address: 'calle Río Luna, 19',
+        address: 'Calle Río Luna, 19',
         city: 'Besande',
         region: 'León',
         year:'1956',
@@ -17,7 +17,7 @@ var PROPERTIES = [
     {
         id: '2',
         description: 'En pleno corazón de los Picos de Europa, con vistas espectaculares al Naranco, ideal para desconectar y vivir apartado del mundo. El terreno incluye establo y granja.',
-        address: 'calle Trasgo, s/n',
+        address: 'Calle Trasgo, s/n',
         city: 'Allende',
         region: 'Asturias',
         year:'1990 (reformada en el 2000)',
@@ -33,7 +33,7 @@ var PROPERTIES = [
     {
         id: '3',
         description: 'Chalet en paraje natural, vivienda tranquila a 1 km del pueblo',
-        address: 'calle Rianxeira, 34',
+        address: 'Calle Rianxeira, 34',
         city: 'Saians',
         region: 'Pontevedra',
         year:'2013',
@@ -103,7 +103,7 @@ var PROPERTIES = [
      {
         id:'8',
         description: 'Chalet en urbanización cercana al pueblo, amplio terreno para construir más edificios anexos',
-        address: 'Calle carbayón, 43',
+        address: 'Calle Carbayón, 43',
         city: 'Navia',
         region: 'Asturias',
         year:'1999',
