@@ -1,0 +1,28 @@
+@import '../styles.css';
+
+.content div {
+    margin-top: var(--side-margin);
+    font-size: var( --field-font-size);
+    max-width: 100%;
+}
+
+.content div img {
+    max-width: 100%;
+}
+
+.content div span {
+    margin-right: 10px;
+}
+
+i {
+    font-size: 24px;
+}
+
+#price-section span {
+    font-weight: 600; 
+}
+
+#description-section{
+    margin-top: calc(var(--side-margin) * 2);
+    margin-bottom: calc(var(--side-margin) * 2);
+}
