@@ -96,7 +96,7 @@ var storageManager = {
     getProperty: function(id){
         var properties = this.getProperties();
         for (var i=0; i < properties.length; i++){
-            if (properties[i].id = id){
+            if (properties[i].id == id){
                 return properties[i];
                 break;
             }
