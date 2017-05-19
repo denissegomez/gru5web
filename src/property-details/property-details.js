@@ -53,7 +53,6 @@ function addMiniatureImages(images){
         // Creates the function that will be called when clicking on this miniature image to show it in the main-image element
         image.addEventListener('click', function(event){
             
-
             var miniatureClicked = event.srcElement;
             document.getElementById('main-image').src =miniatureClicked.src;
         });
