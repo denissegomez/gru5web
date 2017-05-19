@@ -52,13 +52,10 @@ function addMiniatureImages(images){
 
         // Creates the function that will be called when clicking on this miniature image to show it in the main-image element
         image.addEventListener('click', function(event){
-            /* ToDo
-             * 1. Get the main image element and assign it to a variable
-             * 2. Get the path of the image that was clicked and assign it to the src of the main image
-             *    (Note: the event object that is passed to this function when a miniature image is clicked
-             *     passes the clicked html image element in event.srcElement
-             *     As event.srcElement already represents an html img element, it is possible to access to its src)
-             */
+            
+
+            var miniatureClicked = event.srcElement;
+            document.getElementById('main-image').src =miniatureClicked.src;
         });
 
         // adds the miniature image to the miniature-images-section
