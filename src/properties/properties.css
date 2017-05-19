@@ -1,5 +1,11 @@
 @import "../styles.css";
 
+.content div {
+    margin-top: var(--side-margin);
+    font-size: var( --field-font-size);
+    max-width: 100%;
+}
+
 .card{
     max-width: 100%;
     height: 250px;
