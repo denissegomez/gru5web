@@ -69,7 +69,7 @@ function addMiniatureImages(images){
 
 // Listens to the click event on the main image to open a new tab with the image only.
 document.getElementById('main-image').onclick = function(){
-    // ToDo
-    // 1. get the main image element and assign it to a variable
-    // 2. access its src and navigate in a new window to its source
+    
+    var mainImage = document.getElementById('main-image').src;
+    window.open(mainImage);
 }
