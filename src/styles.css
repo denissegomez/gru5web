@@ -94,7 +94,8 @@ form div {
 }
 
 /* Leave only bottom border on inputs */
-form input {
+form input, 
+select {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -103,7 +104,8 @@ form input {
 }
 
 /* Highlight border bottom to primary color on focus and remove full default highlight*/
-form input:focus{
+form input:focus, 
+select:focus{
     outline-width: 0;
     border-bottom-color: var(--primary-color);
 }
