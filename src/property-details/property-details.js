@@ -3,7 +3,11 @@ function logout(){
     window.location.href = "../index.html";
 }
 
-function navHome(){
+function navHomePrevious(){
+
+}
+
+function navHomeNext(){
     
 }
 
