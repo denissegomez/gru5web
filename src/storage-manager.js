@@ -113,5 +113,80 @@ var storageManager = {
         }
     },
 
-    /* Añadir más funciones para inmuebles a medida que sean necesarias (ejemplo: addCommentToProperty()) */
+    addLikeToProperty: function(propertyId, comment){
+        // ToDo
+    },
+
+    getPropertiesListFilter: function(){
+        return this.get('propertiesListFilter');
+    },
+
+    initializePropertiesListFilter: function(){
+        var propertiesListFilter = this.getPropertiesListFilter();
+        if (propertiesListFilter == null){
+            propertiesListFilter = 'cheapest';
+            this.set('propertiesListFilter', propertiesListFilter);
+        }
+    },
+
+    setPropertiesListFilter: function(filter) {
+        this.set('propertiesListFilter', filter);
+    },
+
+    getPropertiesBasedOnFilter: function(){
+        var filter = this.get('propertiesListFilter');
+        var properties = this.getProperties();
+
+        switch(filter){
+            case 'cheapest': 
+                properties.sort(function(a, b) {
+                    return a.price - b.price;
+                });
+                break;
+
+            case 'mostExpensive': 
+                properties.sort(function(a, b) {
+                    return b.price - a.price;
+                });
+                break;
+
+            case 'mostRooms': 
+                properties.sort(function(a, b) {
+                    return b.numberOfBedrooms - a.numberOfBedrooms;
+                });
+                break;
+
+            case 'leastRooms': 
+                properties.sort(function(a, b) {
+                    return a.numberOfBedrooms - b.numberOfBedrooms;
+                });
+                break;
+
+            case 'newest': 
+                properties.sort(function(a, b) {
+                    return b.year - a.year;
+                });
+                break;
+
+            case 'oldest': 
+                properties.sort(function(a, b) {
+                    return a.year - b.year;
+                });
+                break;
+
+            case 'popular': 
+                properties.sort(function(a, b) {
+                    return b.likes - a.likes;
+                });
+                break;
+
+            case 'unpopular': 
+                properties.sort(function(a, b) {
+                    return b.likes - a.likes;
+                });
+                break;
+        }
+
+        return properties;
+    }
 }
