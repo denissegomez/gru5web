@@ -3,6 +3,10 @@ function logout(){
     window.location.href = "../index.html";
 }
 
+function navHome(){
+    
+}
+
 function showErrorAndExit(){
     alert('Se ha producido un error intentando mostrar el detalle de la vivienda seleccionada');
     window.history.back();
