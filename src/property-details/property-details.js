@@ -4,11 +4,19 @@ function logout(){
 }
 
 function navHomePrevious(){
-
+    var sortedProperties = storageManager.getPropertiesBasedOnFilter();
+    // ToDo
+    // 1. Get Id of displayed property getting element with id propertyId
+    // 2. Find position of currently displayed property in sortedProperties
+    // 3. Navigate to this page passing the id of the property immediately BEFORE the current one in sortedProperties
 }
 
 function navHomeNext(){
-    
+    var sortedProperties = storageManager.getPropertiesBasedOnFilter();
+    // ToDo
+    // 1. Get Id of displayed property getting element with id propertyId
+    // 2. Find position of currently displayed property in sortedProperties
+    // 3. Navigate to this page passing the id of the property immediately AFTER the current one in sortedProperties
 }
 
 function showErrorAndExit(){
@@ -38,6 +46,7 @@ function getProperty(){
 
 // Sets the elements' values of the HTML document with the property's properties
 function displayProperty(property){
+    document.getElementById('propertyId').value = property.id;
     document.getElementById('main-image').src = property.images[0];
     document.getElementById("price").innerHTML = property.price + ' €';    
     document.getElementById("year").innerHTML = property.year;
