@@ -53,6 +53,12 @@ body {
     border: none;
 }
 
+@media (min-width: 1500px) { 
+    .content {
+        width: 50% !important;
+    }
+}
+
 .content {
     width: 70%;
     margin: 0 auto;
