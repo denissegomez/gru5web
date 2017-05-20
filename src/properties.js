@@ -127,7 +127,7 @@ var PROPERTIES = [
         id: '9',
         description: 'Vivienda de lujo en pleno corazón del parque Nacional de Bardenas Reales, rodeado de naturaleza y cerca del núcleo urbano, ideal para los amantes del senderismo y los deportes de invierno',
         address: 'Avenida Carmilla,4',
-        city: 'Pamplona',
+        city: 'Marcilla',
         region: 'Navarra',
         year:2014,
         numberOfBedrooms: 8,
