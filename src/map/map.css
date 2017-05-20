@@ -1,0 +1,9 @@
+@import '../styles.css';
+
+.content div {
+    margin-top: var(--side-margin);
+}
+
+.footer {
+    margin-top: calc(var(--side-margin) * 2) !important;
+}
