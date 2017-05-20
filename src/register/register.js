@@ -12,7 +12,6 @@ function register(){
             manageDuplicateUser(addUserResult);
         }
     }
-    // ToDo: if result is false show error message, if true, login the user and redirect.
 }
 
 function getUser(){
@@ -30,6 +29,7 @@ function getUser(){
         // email
         // username
         // password
+        banned: false,
     };
     
     user.name = document.getElementById("name").value;
