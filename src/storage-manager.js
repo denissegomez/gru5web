@@ -85,6 +85,17 @@ var storageManager = {
 
         return result;
     }, 
+
+    banUser: function(user){
+        var users = this.getUsers();
+        for (var i=0; i < users.length; i++){
+            if (user.username == users[i].username){
+                users[i].banned = true;
+                break;
+            }
+        }
+        this.set('users', users);
+    },
     
     // Gets all the properties
     getProperties: function(){
