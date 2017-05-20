@@ -60,6 +60,20 @@
             
             <!-- ToDo Comments Form here  formulario como el login pero con dos campos quitar autocomplete, poner en el js la función vacía, dejar el required -->
 
+            <div class="content">
+            <form id="peopleComments" action="#" onsubmit="publishComment(); return false;">
+                <div>
+                    <input textarea rows="4" cols="50" required placeholder="Please, leave a comment"> </textarea>
+                    <label>Comments</label>
+                </div>
+                 <div>
+                 <input type="submit" value="Send">
+                </div>
+            </form>
+
+            <p id="errorMessage" class="errorMessage"></p>
+            
+            </div>
 
 
         </div>

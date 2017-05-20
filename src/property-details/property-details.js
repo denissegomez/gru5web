@@ -44,6 +44,10 @@ function getProperty(){
     }
 }
 
+function publishComment(){
+    
+}
+
 // Sets the elements' values of the HTML document with the property's properties
 function displayProperty(property){
     document.getElementById('propertyId').value = property.id;
