@@ -1,15 +1,59 @@
+// function called when login form is valid
 function login(){
-    // ToDo get user from field username
-    // ToDo get password from field password
+    var credentials = getCredentials();
 
-    // ToDo get the user from localStorage providing the gotten username
+    var user = storageManager.getUserByUsername(credentials.username);
 
-    // ToDo if user does not exist show error
-    // ToDo if password is wrong show error
+    if (validateUser(credentials, user)) {
+        storageManager.setCurrentUser(user);
+        window.location.href = '../map/map.html';
+    }
+}
 
-    // ToDo if everything ok 
-    // 1. set current user in local storage using storageManager.setCurrentUser
-    // 2. redirect user to map view
+// gets the values from the form fields
+function getCredentials(){
+    var credentials = {
+        username: '',
+        password: '', 
+    };
 
-    // ToDo User has only 3 attempts to log in. If three failed attempts, block it on localstorage
+    credentials.username = document.getElementById('username').value;
+    credentials.password = document.getElementById('password').value;
+
+    return credentials;
+}
+
+// validates the login, counts the attempts and bans the user if needed
+function validateUser(credentials, user) {
+    var result = true;
+    var maxAttempts = 3;
+    var remainingAttempts = 0;
+    var attempts = document.getElementById('attempts').value;
+    
+    var errorMessage = document.getElementById("errorMessage");
+    errorMessage.innerText = "";
+
+    if (user == null){
+        result = false;
+        errorMessage.innerText = 'El usuario introducido no existe.';
+    }
+    else if(user.banned){
+        result = false;
+        attempts = maxAttempts;
+    }
+    else if(credentials.password != user.password){
+        result = false;
+        attempts++;
+        remainingAttempts = maxAttempts - attempts;
+        errorMessage.innerText = 'La contraseña introducida no es correcta. Le quedan ' + remainingAttempts + ' intentos.';
+    }
+    
+    if (attempts == maxAttempts){
+        storageManager.banUser(user);
+        errorMessage.innerText = 'Su usuario está bloqueado. Por favor contacte con su administrador';
+    }
+
+    document.getElementById('attempts').value = attempts;
+
+    return result;
 }
