@@ -5,6 +5,12 @@ function logout(){
 
 function navHomePrevious(){
     var sortedProperties = storageManager.getPropertiesBasedOnFilter();
+
+    for (var i=0;i < sortedProperties.length:i++){
+        if (sortedProperties[i].id==propertyId){
+            displayProperty(sortedProperties[i-1].id);
+        }
+    }
     // ToDo
     // 1. Get Id of displayed property getting element with id propertyId
     // 2. Find position of currently displayed property in sortedProperties
@@ -13,6 +19,12 @@ function navHomePrevious(){
 
 function navHomeNext(){
     var sortedProperties = storageManager.getPropertiesBasedOnFilter();
+
+    for (var i=0;i < sortedProperties.length:i++){
+        if (sortedProperties[i].id==propertyId){
+            displayProperty(sortedProperties[i+1].id);
+        }
+    }
     // ToDo
     // 1. Get Id of displayed property getting element with id propertyId
     // 2. Find position of currently displayed property in sortedProperties
