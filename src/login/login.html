@@ -19,25 +19,32 @@
         </div>
 
         <div class="content">
-            <form id="loginForm" action="#" onsubmit="login(); return false;" autocomplete="true">
-                <div>
-                    <input type="text" id="username" required placeholder="Escriba aquí su nombre de usuario">
-                    <label>Nombre de Usuario</label>
-                </div>
-                <div>
-                    <input type="password" id="password" required>
-                    <label>Contraseña</label>
-                </div>
-                 <div>
-                 <input type="submit" value="Conectarse">
-                </div>
-            </form>
 
-            <p id="errorMessage" class="errorMessage"></p>
-            <input type="hidden" id="attempts" value="0">            
+            <div class="form-card">
+                <h2>Inicio de sesión</h2>
+                <p>Introduzca sus credenciales para entrar en la aplicación</p>
+                <img src="../images/login.jpeg">
+                <form id="loginForm" action="#" onsubmit="login(); return false;" autocomplete="true">
+                    <div>
+                        <input type="text" id="username" required placeholder="Escriba aquí su nombre de usuario">
+                        <label>Nombre de Usuario</label>
+                    </div>
+                    <div>
+                        <input type="password" id="password" required>
+                        <label>Contraseña</label>
+                    </div>
+                    <div>
+                    <input type="submit" value="Conectarse">
+                    </div>
+                </form>
+
+                <p id="errorMessage" class="errorMessage"></p>
+                <input type="hidden" id="attempts" value="0">
+            </div>    
+
         </div>
 
-        <!-- Footer -->
+         <!-- Footer -->
         <div class="footer">
             <div>
                 <i class="ion-social-facebook" aria-hidden="true"></i>
@@ -47,7 +54,7 @@
             <div>
                 <p>© 2017, Property Portal España</p>
             </div>
-        </div>
+        </div> 
 
         <script src="../storage-manager.js"></script>
         <script src="login.js"></script>

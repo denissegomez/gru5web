@@ -141,3 +141,15 @@ form [type="submit"]:active {
 .errorMessage {
     color: red;
 }
+
+.form-card {
+    width: 100%;
+    min-width: 650px;
+    margin: 0 auto;
+    border: 1px solid var(--shadow-color);
+    margin-top: var(--side-margin);
+}
+
+.form-card img{
+    width: 100%;
+}
