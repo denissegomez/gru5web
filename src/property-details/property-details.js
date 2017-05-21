@@ -6,7 +6,7 @@ function logout(){
 function navHomePrevious(){
     var sortedProperties = storageManager.getPropertiesBasedOnFilter();
 
-    for (var i=0;i < sortedProperties.length:i++){
+    for (var i=0;i < sortedProperties.length;i++){
         if (sortedProperties[i].id==propertyId){
             displayProperty(sortedProperties[i-1].id);
         }
@@ -20,7 +20,7 @@ function navHomePrevious(){
 function navHomeNext(){
     var sortedProperties = storageManager.getPropertiesBasedOnFilter();
 
-    for (var i=0;i < sortedProperties.length:i++){
+    for (var i=0;i < sortedProperties.length;i++){
         if (sortedProperties[i].id==propertyId){
             displayProperty(sortedProperties[i+1].id);
         }
