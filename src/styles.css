@@ -74,6 +74,7 @@ body {
     flex-direction: column;
     color: white;
     padding-top: var(--side-margin);
+    margin-top: var(--side-margin);
 }
 
 .footer div {

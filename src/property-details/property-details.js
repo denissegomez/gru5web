@@ -11,10 +11,6 @@ function navHomePrevious(){
             displayProperty(sortedProperties[i-1].id);
         }
     }
-    // ToDo
-    // 1. Get Id of displayed property getting element with id propertyId
-    // 2. Find position of currently displayed property in sortedProperties
-    // 3. Navigate to this page passing the id of the property immediately BEFORE the current one in sortedProperties
 }
 
 function navHomeNext(){
@@ -25,10 +21,6 @@ function navHomeNext(){
             displayProperty(sortedProperties[i+1].id);
         }
     }
-    // ToDo
-    // 1. Get Id of displayed property getting element with id propertyId
-    // 2. Find position of currently displayed property in sortedProperties
-    // 3. Navigate to this page passing the id of the property immediately AFTER the current one in sortedProperties
 }
 
 function showErrorAndExit(){

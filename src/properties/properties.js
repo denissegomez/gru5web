@@ -3,6 +3,10 @@ function logout(){
     window.location.href = "../index.html";
 }
 
+function pageLoaded(){
+    filterChanged();
+}
+
 function filterChanged(){
     storageManager.setPropertiesListFilter(document.getElementById('filter').value);
     
@@ -14,15 +18,21 @@ function displayProperties(properties){
     emptyPropertiesList();
 
     for(var i = 0; i < properties.length; i++){
-        var divCard = createDiv(properties[i].id, 'card');
-        var imageElement = createImage(properties[i].images[0]);
-        var divElement = createDiv('innerDiv-' + i,'');
-        var priceElement = createH2(properties[i].price);
-        var roomsElement = createSpan(properties[i].numberOfBedrooms);
-        var yearElement = createSpan(properties[i].year);
-        var addressElement = createParagraph(properties[i].address + ' ' + properties[i].city);
-        var descriptionElement = createParagraph(properties[i].description);
+        var propertyId = properties[i].id
+        var divCard = createDiv('card-' + propertyId, 'card');
+        var imageElement = createImage('image-' + propertyId, properties[i].images[0]);
+        var divElement = createDiv('innerDiv-' + propertyId,'');
+        var priceElement = createH2('price-' + propertyId, properties[i].price);
+        var roomsElement = createSpan('rooms-' + propertyId, properties[i].numberOfBedrooms);
+        var yearElement = createSpan('year-' + propertyId, properties[i].year);
+        var addressElement = createParagraph('address-' + propertyId, properties[i].address + ' ' + properties[i].city);
+        var descriptionElement = createParagraph('description-' + propertyId, properties[i].description);
         
+        divCard.addEventListener('click', function(event){
+            var clickedPropertyId = event.srcElement.id.split('-')[1];
+            window.location.href = '../property-details/property-details.html?id=' + clickedPropertyId;
+        });
+
         divElement.appendChild(priceElement);
         divElement.appendChild(roomsElement);
         divElement.appendChild(yearElement);
@@ -51,26 +61,30 @@ function createDiv(id, className){
     return div;
 }
 
-function createImage(imageUrl){
+function createImage(id, imageUrl){
     var image = document.createElement('img');
+    image.setAttribute('id', id);
     image.src = imageUrl;
     return image;
 }
 
-function createH2(content){
+function createH2(id, content){
     var h2 = document.createElement('h2');
+    h2.setAttribute('id', id);
     h2.innerHTML = content;
     return h2;
 }
 
-function createSpan(content){
+function createSpan(id, content){
     var span = document.createElement('span');
+    span.setAttribute('id', id);
     span.innerHTML = content;
     return span;
 }
 
-function createParagraph(content){
+function createParagraph(id, content){
     var paragraph = document.createElement('p');
+    paragraph.setAttribute('id', id);
     paragraph.innerHTML = content;
     return paragraph;
 }
