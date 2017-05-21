@@ -30,9 +30,11 @@ function displayProperties(properties){
         var divCard = createDiv('card-' + propertyId, 'card');
         var imageElement = createImage('image-' + propertyId, properties[i].images[0]);
         var divElement = createDiv('innerDiv-' + propertyId,'');
-        var priceElement = createH2('price-' + propertyId, properties[i].price);
-        var roomsElement = createSpan('rooms-' + propertyId, properties[i].numberOfBedrooms);
+        var priceElement = createH2('price-' + propertyId, properties[i].price + '€');
+        var roomsElement = createSpan('rooms-' + propertyId, properties[i].numberOfBedrooms + ' habitaciones');
         var yearElement = createSpan('year-' + propertyId, properties[i].year);
+        var likesElement = createParagraph('likes-' + propertyId, properties[i].likes + ' interesados');
+        likesElement.setAttribute('class', 'likes');
         var addressElement = createParagraph('address-' + propertyId, properties[i].address + ' ' + properties[i].city);
         var descriptionElement = createParagraph('description-' + propertyId, properties[i].description);
         
@@ -44,6 +46,7 @@ function displayProperties(properties){
         divElement.appendChild(priceElement);
         divElement.appendChild(roomsElement);
         divElement.appendChild(yearElement);
+        divElement.appendChild(likesElement);
         divElement.appendChild(addressElement);
         divElement.appendChild(descriptionElement);
 
