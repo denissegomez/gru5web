@@ -4,8 +4,15 @@ function logout(){
 }
 
 function pageLoaded(){
+     var queryParams = new URLSearchParams(window.location.search);
+    if (queryParams.has('region') == true && queryParams.get('region') == 'Navarra'){
+        filterChanged();
+    }
+    else {    
+        alert('Se ha producido un error intentando mostrar el detalle de la vivienda seleccionada');
+        window.history.back();
+    }
     
-    filterChanged();
 }
 
 function filterChanged(){
