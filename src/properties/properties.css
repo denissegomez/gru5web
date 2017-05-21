@@ -8,6 +8,7 @@
 
 .card{
     max-width: 100%;
+    min-width: 650px;
     height: 250px;
     display: flex;
     border: 1px solid var(--shadow-color);

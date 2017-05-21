@@ -124,7 +124,7 @@ var storageManager = {
         }
     },
 
-    addLikeToProperty: function(propertyId, comment){
+    addLikeToProperty: function(propertyId){
         // ToDo
     },
 

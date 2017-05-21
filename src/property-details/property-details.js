@@ -49,7 +49,7 @@ function getProperty(){
 }
 
 function publishComment(){
-    
+    // call storageManager.addLikeToProperty passing the id of the property displayed (you can find it in the HTML, in the input of type hidden with id propertyId)
 }
 
 // Sets the elements' values of the HTML document with the property's properties
