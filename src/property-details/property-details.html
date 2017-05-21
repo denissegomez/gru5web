@@ -58,16 +58,21 @@
                 <p id="description"></p>
             </div>
             
+            <div>
+                <h4>Envíele un comentario al propietario</h4>
+                <hr>
+                <form id="peopleComments" action="#" onsubmit="publishComment(); return false;">
+                    <div>
+                        <input textarea rows="4" cols="50" required placeholder="Escriba aquí su comentario"> </textarea>
+                        <label>Comments</label>
+                    </div>
+                    <div>
+                    <input type="submit" value="Enviar">
+                    </div>
+                </form>
+
+            </div>
             
-            <form id="peopleComments" action="#" onsubmit="publishComment(); return false;">
-                <div>
-                    <input textarea rows="4" cols="50" required placeholder="Please, leave a comment"> </textarea>
-                    <label>Comments</label>
-                </div>
-                 <div>
-                 <input type="submit" value="Send">
-                </div>
-            </form>
             
         </div>
         
