@@ -56,7 +56,8 @@ function publishComment(){
 function displayProperty(property){
     document.getElementById('propertyId').value = property.id;
     document.getElementById('main-image').src = property.images[0];
-    document.getElementById("price").innerHTML = property.price + ' €';    
+    document.getElementById("price").innerHTML = property.price + ' €'; 
+    document.getElementById('likes').innerHTML = property.likes;   
     document.getElementById("year").innerHTML = property.year;
     document.getElementById("description").innerHTML = property.description;
     document.getElementById("address").innerHTML = property.address + '. ' + property.city + ' (' + property.region + ')';
