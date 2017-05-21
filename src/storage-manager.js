@@ -86,6 +86,7 @@ var storageManager = {
         return result;
     }, 
 
+    // Bans the given user
     banUser: function(user){
         var users = this.getUsers();
         for (var i=0; i < users.length; i++){
@@ -125,7 +126,14 @@ var storageManager = {
     },
 
     addLikeToProperty: function(propertyId){
-        // ToDo
+        var properties = this.get('properties');
+        for (var i = 0; i < properties.length; i++){
+            if(properties[i].id == propertyId){
+                properties[i].likes += 1;
+                break;
+            }
+        }
+        this.set('properties');
     },
 
     getPropertiesListFilter: function(){
