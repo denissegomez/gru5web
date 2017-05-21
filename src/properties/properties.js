@@ -4,6 +4,7 @@ function logout(){
 }
 
 function pageLoaded(){
+    
     filterChanged();
 }
 

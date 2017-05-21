@@ -3,26 +3,6 @@ function logout(){
     window.location.href = "../index.html";
 }
 
-function navHomePrevious(){
-    var sortedProperties = storageManager.getPropertiesBasedOnFilter();
-
-    for (var i=0;i < sortedProperties.length;i++){
-        if (sortedProperties[i].id==propertyId){
-            displayProperty(sortedProperties[i-1].id);
-        }
-    }
-}
-
-function navHomeNext(){
-    var sortedProperties = storageManager.getPropertiesBasedOnFilter();
-
-    for (var i=0;i < sortedProperties.length;i++){
-        if (sortedProperties[i].id==propertyId){
-            displayProperty(sortedProperties[i+1].id);
-        }
-    }
-}
-
 function showErrorAndExit(){
     alert('Se ha producido un error intentando mostrar el detalle de la vivienda seleccionada');
     window.history.back();
@@ -45,6 +25,26 @@ function getProperty(){
     }
     else {
         showErrorAndExit();
+    }
+}
+
+function navHomePrevious(){
+    var sortedProperties = storageManager.getPropertiesBasedOnFilter();
+
+    for (var i=0;i < sortedProperties.length;i++){
+        if (sortedProperties[i].id==propertyId){
+            displayProperty(sortedProperties[i-1].id);
+        }
+    }
+}
+
+function navHomeNext(){
+    var sortedProperties = storageManager.getPropertiesBasedOnFilter();
+
+    for (var i=0;i < sortedProperties.length;i++){
+        if (sortedProperties[i].id==propertyId){
+            displayProperty(sortedProperties[i+1].id);
+        }
     }
 }
 
