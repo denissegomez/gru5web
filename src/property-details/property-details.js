@@ -30,6 +30,7 @@ function getProperty(){
 
 function navHomePrevious(){
     var sortedProperties = storageManager.getPropertiesBasedOnFilter();
+    // ToDo var propertyId = ?? Get it from the <input type="hidden" id="propertyId">
 
     for (var i=0;i < sortedProperties.length;i++){
         if (sortedProperties[i].id==propertyId){
@@ -40,6 +41,7 @@ function navHomePrevious(){
 
 function navHomeNext(){
     var sortedProperties = storageManager.getPropertiesBasedOnFilter();
+    // ToDo var propertyId = ?? Get it from the <input type="hidden" id="propertyId">
 
     for (var i=0;i < sortedProperties.length;i++){
         if (sortedProperties[i].id==propertyId){
@@ -49,7 +51,7 @@ function navHomeNext(){
 }
 
 function publishComment(){
-    // call storageManager.addLikeToProperty passing the id of the property displayed (you can find it in the HTML, in the input of type hidden with id propertyId)
+    // ToDo call storageManager.addLikeToProperty passing the id of the property displayed (you can find it in the HTML, in the input of type hidden with id propertyId)
 }
 
 // Sets the elements' values of the HTML document with the property's properties
