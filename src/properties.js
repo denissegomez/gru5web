@@ -57,7 +57,6 @@ var PROPERTIES = [
         price: 1000000,
         likes: 0,
         images: ['/images/madrid1.jpg',
-        '/images/madrid2.jpg',
         '/images/madrid3.jpg',
         '/images/madrid4.jpg',
         '/images/madrid9.jpg'],        
