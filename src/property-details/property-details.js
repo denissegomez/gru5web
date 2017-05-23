@@ -32,7 +32,7 @@ function getProperty(){
 function navHomePrevious(){
     var sortedProperties = storageManager.getPropertiesBasedOnFilter();
     // ToDo var propertyId = ?? Get it from the <input type="hidden" id="propertyId">
-    var propertyId=document.getElementById('propertyId').value;
+    var propertyId=document.getElementById('propertyId');
 
     for (var i=0;i < sortedProperties.length;i++){
         if (sortedProperties[i].id==propertyId){
@@ -44,7 +44,7 @@ function navHomePrevious(){
 function navHomeNext(){
     var sortedProperties = storageManager.getPropertiesBasedOnFilter();
     // ToDo var propertyId = ?? Get it from the <input type="hidden" id="propertyId">
-    var propertyId=document.getElementById('propertyId').value;
+    var propertyId=document.getElementById('propertyId');
     for (var i=0;i < sortedProperties.length;i++){
         if (sortedProperties[i].id==propertyId){
             displayProperty(sortedProperties[i+1].id);
