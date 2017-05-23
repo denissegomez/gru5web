@@ -77,7 +77,7 @@ var PROPERTIES = [
     },
     {
         id: '6',
-        description: 'Chalet de lujo a escasos minutos del centro, vivienda vanguardista completamente amueblada',
+        description: 'Chalet de lujo a escasos minutos del centro, el lujoso mobiliario está realizado con maderas autóctonas de la zona de Elizondo por ebanistas que trabajan con herramientas y técnicas de hace 100 años',
         address: 'Calle Aramburu,2',
         city: 'Elizondo',
         region: 'Navarra',
