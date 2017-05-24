@@ -29,35 +29,79 @@ function getProperty(){
 }
 
 
-function navHomePrevious(){
+function displayPreviousProperty(){
     var sortedProperties = storageManager.getPropertiesBasedOnFilter();
-    // ToDo var propertyId = ?? Get it from the <input type="hidden" id="propertyId">
-    var propertyId=;
+    var propertyId = document.getElementById('propertyId').value;
+    var newPosition;
 
     for (var i=0;i < sortedProperties.length;i++){
         if (sortedProperties[i].id==propertyId){
-            displayProperty(sortedProperties[i-1].id);
+            if (i > 0){
+                displayProperty(sortedProperties[i-1]);
+                newPosition = i -1;
+            }            
+            else {
+                newPosition = i;
+            }
+
+            setNavigationButtonsVisibility(newPosition, sortedProperties.length);
+            break;
         }
     }
 }
 
-function navHomeNext(){
+function displayNextProperty(){
     var sortedProperties = storageManager.getPropertiesBasedOnFilter();
-    // ToDo var propertyId = ?? Get it from the <input type="hidden" id="propertyId">
-    var propertyId=;
+    var propertyId = document.getElementById('propertyId').value;
+    var newPosition;
+
     for (var i=0;i < sortedProperties.length;i++){
         if (sortedProperties[i].id==propertyId){
-            displayProperty(sortedProperties[i+1].id);
+            
+            if (i < sortedProperties.length - 1){
+                displayProperty(sortedProperties[i + 1]);
+                newPosition = i + 1;
+            }
+            else {
+                newPosition = i;
+            }
+
+            setNavigationButtonsVisibility(newPosition, sortedProperties.length);
+            break;
         }
     }
 }
 
+// Hides the previous / next property buttons if on first or last position
+function setNavigationButtonsVisibility(currentPosition, numberOfElements){
+    document.getElementById('previousProperty').style.visibility = "visible";
+    document.getElementById('nextProperty').style.visibility = "visible";
+
+    if (currentPosition == 0){
+        document.getElementById('previousProperty').style.visibility = "collapse";
+    }
+
+    if (currentPosition == numberOfElements -1) {
+        document.getElementById('nextProperty').style.visibility = "collapse";
+    }
+}
+
+// Adds a new interest onthe property
 function publishComment(){
-    // ToDo call storageManager.addLikeToProperty passing the id of the property displayed (you can find it in the HTML, in the input of type hidden with id propertyId)
+    var propertyId = document.getElementById('propertyId').value;
+    storageManager.addLikeToProperty(propertyId);
+
+    document.getElementById('comments').value = '';
+
+    var property = storageManager.getProperty(propertyId);
+    displayProperty(property);
+    return false;
 }
 
 // Sets the elements' values of the HTML document with the property's properties
 function displayProperty(property){
+    removeMiniatureImages();
+    
     document.getElementById('propertyId').value = property.id;
     document.getElementById('main-image').src = property.images[0];
     document.getElementById("price").innerHTML = property.price + ' €'; 
@@ -68,6 +112,14 @@ function displayProperty(property){
     document.getElementById("numberOfBedrooms").innerHTML = property.numberOfBedrooms + ' habitaciones';
 
     addMiniatureImages(property.images);
+}
+
+// Remove all the miniatures
+function removeMiniatureImages(){
+    var miniatureImagesSection = document.getElementById('miniature-images-section');
+    while(miniatureImagesSection.firstChild){
+        miniatureImagesSection.removeChild(miniatureImagesSection.firstChild);
+    }
 }
 
 // Creates miniature images for all of the property images below the main image
