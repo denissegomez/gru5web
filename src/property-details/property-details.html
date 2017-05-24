@@ -24,8 +24,8 @@
             </div>
 
             <div id="nav-section">
-                <button class="nav-button" onclick="navHomePrevious()">Ir a la anterior vivienda</button>
-                <button class="nav-button" onclick="navHomeNext()">Ir a la siguiente vivienda</button>
+                <button class="nav-button" id="previousProperty" onclick="displayPreviousProperty()">Ir a la anterior vivienda</button>
+                <button class="nav-button" id="nextProperty" onclick="displayNextProperty()">Ir a la siguiente vivienda</button>
             </div>
 
              <input type="hidden" id="propertyId">
@@ -65,9 +65,9 @@
             <div>
                 <h4>Envíele un comentario al propietario</h4>
                 <hr>
-                <form id="peopleComments" action="#" onsubmit="publishComment(); return false;">
+                <form id="peopleComments" onsubmit="return publishComment();">
                     <div>
-                        <input textarea rows="4" cols="50" required placeholder="Escriba aquí su comentario"> </textarea>
+                        <input textarea id="comments" rows="4" cols="50" required placeholder="Escriba aquí su comentario"> </textarea>
                         <label>Comments</label>
                     </div>
                     <div>
