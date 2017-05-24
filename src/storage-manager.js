@@ -133,7 +133,7 @@ var storageManager = {
                 break;
             }
         }
-        this.set('properties');
+        this.set('properties', properties);
     },
 
     getPropertiesListFilter: function(){
