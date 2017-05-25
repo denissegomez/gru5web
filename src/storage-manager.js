@@ -201,7 +201,7 @@ var storageManager = {
 
             case 'unpopular': 
                 properties.sort(function(a, b) {
-                    return b.likes - a.likes;
+                    return a.likes - b.likes;
                 });
                 break;
         }
