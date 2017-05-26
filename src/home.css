@@ -11,7 +11,7 @@
     background-image: url("images/kimson-doan-37958.jpg");
     background-size: cover;
     width: 100%;
-    min-height: 790px;
+    height: 820px;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -30,6 +30,7 @@
     border-radius: 5px;
     padding: 5px 35px 35px;
     align-content: center;
+    width: 60%;
 }
 
 h2 {
