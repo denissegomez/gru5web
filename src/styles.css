@@ -28,7 +28,7 @@ body {
 
 .header{
     background-color: var(--primary-color);
-    height: 80px; /* Definir altura apropiada y considerar si utilizar una variable o no */
+    height: 100px; /* Definir altura apropiada y considerar si utilizar una variable o no */
     /* Alinear título y darle tamaño, añadir logo, etc..*/
     color: white;
     font-size: var(--title-font-size);
@@ -49,8 +49,15 @@ body {
     font-size: var(--normal-font-size);
     color: white;
     margin-left: 15px;
+    padding: 15px;
     background: transparent;
-    border: none;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+.link-button:hover {
+    background: white;
+    color: var(--primary-color);
 }
 
 @media (min-width: 1500px) { 
@@ -66,7 +73,7 @@ body {
 }
 
 .footer{
-    background-color: grey;
+    background-color: #266792;
     min-height: 100px;
     display: flex;
     justify-content: center;

@@ -1,5 +1,5 @@
 .header {
-    background-color: transparent !important;
+    background-color: var(--primary-color);
     position: absolute !important;
     right: 0;
     left: 0;
@@ -8,17 +8,68 @@
 
 .banner {
     position: relative;
-    background-image: url("images/banner.jpg");
+    background-image: url("images/kimson-doan-37958.jpg");
     background-size: cover;
     width: 100%;
-    height: 600px;
+    min-height: 790px;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    margin: 0;
+    padding-bottom: -30px;
+    margin-bottom: -30px;
 }
 
 .banner div {
     align-self: center;
-    font-size: 36px;
+}
+
+.well  {
+    background: white;
+    border-radius: 5px;
+    padding: 5px 35px 35px;
+    align-content: center;
+}
+
+h2 {
+    color: #29b6f6;
+    text-align: center;
+    font-weight: normal;
+    font-size: 36pt;
+}
+
+h3 {
+    color: grey;
+    text-align: center;
+    font-weight: normal;
+    font-size: 24pt;
+}
+
+.box {
+    display:inline-block;
+    width: 43%;
+    background: #29b6f6;
+    color: white;
+    border-radius: 5px;
+    align-content: center;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0px 3px 0px #266792;
+}
+
+.box-left {
+    float: left;
+}
+.box-right {
+   float: right;
+}
+
+.big {
+    font-size: 64px;
+}
+
+.text-box {
+    font-weight: 400;
+    font-size: 14pt;
 }
