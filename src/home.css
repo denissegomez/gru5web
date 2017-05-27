@@ -1,28 +1,8 @@
-.header {
-    background-color: var(--primary-color);
-    position: absolute !important;
-    right: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.banner {
-    position: relative;
-    background-image: url("images/kimson-doan-37958.jpg");
+.content {
+    background-image: url("images/kimson-doan-37958.jpg") !important;
     background-size: cover;
-    width: 100%;
-    height: 820px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    margin: 0;
-    padding-bottom: -30px;
-    margin-bottom: -30px;
-}
-
-.banner div {
-    align-self: center;
+    width: 100% !important;
+    height: calc(100vh - 100px);
 }
 
 .well  {
