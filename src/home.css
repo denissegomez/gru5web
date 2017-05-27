@@ -1,35 +1,41 @@
+@import 'variables.css';
+
 .content {
     background-image: url("images/kimson-doan-37958.jpg") !important;
     background-size: cover;
     width: 100% !important;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 230px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.well  {
+.center-box  {
+    width: 60%;
+    height: auto;
     background: white;
     border-radius: 5px;
-    padding: 5px 35px 35px;
-    align-content: center;
-    width: 60%;
+    min-width: 650px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: var(--side-margin);
 }
 
 .box {
-    display:inline-block;
     width: 43%;
-    background: #29b6f6;
-    color: white;
+    padding: 30px 20px;
+    background: var(--primary-color);
+    color: var(--contrast-font-color);
     border-radius: 5px;
+    box-shadow: 0px 3px 0px var(--shadow-color);
     align-content: center;
     text-align: center;
-    padding: 30px 20px;
-    box-shadow: 0px 3px 0px #266792;
-}
-
-.box-left {
-    float: left;
-}
-.box-right {
-   float: right;
 }
 
 .big {
@@ -38,7 +44,7 @@
 
 .text-box {
     font-weight: 400;
-    font-size: 14pt;
+    font-size: var(--normal-font-size);
 }
 
 .footer {

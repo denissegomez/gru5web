@@ -16,7 +16,7 @@
   /* Font */
   --font-family: Arial, Helvetica, sans-serif;
   --title-font-size: 26px;
-  --normal-font-size: 14px;
+  --normal-font-size: 14pt;
 }
 
 body {
