@@ -1,7 +1,7 @@
 @import 'variables.css';
 
 .content {
-    background-image: url("images/kimson-doan-37958.jpg") !important;
+    background-image: url("images/home-background.jpg") !important;
     background-size: cover;
     width: 100% !important;
     height: calc(100vh - 230px);
@@ -16,6 +16,7 @@
     background: white;
     border-radius: 5px;
     min-width: 650px;
+    opacity: 0.95;
 }
 
 .container {

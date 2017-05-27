@@ -15,6 +15,7 @@ function pageLoaded(){
     
 }
 
+// when the filter changes gets the list of properties filtered accordingly
 function filterChanged(){
     storageManager.setPropertiesListFilter(document.getElementById('filter').value);
     
@@ -22,6 +23,7 @@ function filterChanged(){
     displayProperties(properties);
 }
 
+// gets a list of properties and creates the cards with the content dinamically for each property
 function displayProperties(properties){
     emptyPropertiesList();
 

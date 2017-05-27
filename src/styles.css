@@ -1,6 +1,6 @@
 :root {
   /* Palette */
-  --primary-color: #29b6f6; /* Elegir los colores apropiados para la paleta y añadir más propiedades si hacen falta*/
+  --primary-color: #29b6f6;
   --accent-color:#ffab40;
   --warn-color: red;
   --shadow-color: lightgrey;
@@ -29,8 +29,7 @@ body {
 
 .header{
     background-color: var(--primary-color);
-    height: 100px; /* Definir altura apropiada y considerar si utilizar una variable o no */
-    /* Alinear título y darle tamaño, añadir logo, etc..*/
+    height: 100px;
     color: white;
     font-size: var(--title-font-size);
     padding-left: var(--side-margin);

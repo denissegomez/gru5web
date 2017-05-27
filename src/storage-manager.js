@@ -125,6 +125,7 @@ var storageManager = {
         }
     },
 
+    // Adds a like to a given property
     addLikeToProperty: function(propertyId){
         var properties = this.get('properties');
         for (var i = 0; i < properties.length; i++){
@@ -136,10 +137,12 @@ var storageManager = {
         this.set('properties', properties);
     },
 
+    // gets all the filter for the properties list
     getPropertiesListFilter: function(){
         return this.get('propertiesListFilter');
     },
 
+    // initializes the filter for the properties list
     initializePropertiesListFilter: function(){
         var propertiesListFilter = this.getPropertiesListFilter();
         if (propertiesListFilter == null){
@@ -148,10 +151,12 @@ var storageManager = {
         }
     },
 
+    // sets the filter for the properties list
     setPropertiesListFilter: function(filter) {
         this.set('propertiesListFilter', filter);
     },
 
+    // gets all the properties and sorts them based on the current filter
     getPropertiesBasedOnFilter: function(){
         var filter = this.get('propertiesListFilter');
         var properties = this.getProperties();
