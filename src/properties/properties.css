@@ -28,6 +28,13 @@
     margin-right: var(--side-margin);
 }
 
+.card h2 {
+    text-align: left;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+}
+
 .card span{
     font-weight: 600;
     font-size: var(--field-font-size);

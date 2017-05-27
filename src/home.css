@@ -33,20 +33,6 @@
     width: 60%;
 }
 
-h2 {
-    color: #29b6f6;
-    text-align: center;
-    font-weight: normal;
-    font-size: 36pt;
-}
-
-h3 {
-    color: grey;
-    text-align: center;
-    font-weight: normal;
-    font-size: 24pt;
-}
-
 .box {
     display:inline-block;
     width: 43%;
