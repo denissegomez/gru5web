@@ -82,9 +82,6 @@ body {
     color: white;
     padding-top: var(--side-margin);
     margin-top: var(--side-margin);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }
 
 .footer div {

@@ -74,3 +74,10 @@ h3 {
     font-weight: 400;
     font-size: 14pt;
 }
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+    
